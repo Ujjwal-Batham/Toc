@@ -1,0 +1,25 @@
+# String divisible by 2
+def q0(s,i):
+  if (i==len(s)):
+    print("Accepted")
+    return;
+
+  if(s[i]=='1'):
+    q1(s,i+1)
+  else:
+    q0(s,i+1)
+
+def q1(s,i):
+  if (i==len(s)):
+    print("Rejected")
+    return;
+
+  if(s[i]=='1'):
+    q1(s,i+1)
+  else:
+    q0(s,i+1)
+
+if __name__ == '__main__':
+  s = "10"
+
+  q0(s,0)
